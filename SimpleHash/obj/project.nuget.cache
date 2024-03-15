@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hHEVE2e1N6dAtXEjbSSrvlVzEJitAVNeVcOPo8n9EAbY8OTzSRhmLWX5S9MWS5goH1m6UB2f5XLVB6ZCpCwf3w==",
+  "dgSpecHash": "UtzgE/13VqCxPvd5GlNNFVFIw2tltwF4gZZLH2gBt/rrjsbB4P8ImyRG/SuSyXJbPrFGe+1z1SI+ZQG+EsAl9w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\mu7147\\Desktop\\604\\SimpleHash\\SimpleHash.csproj",
+  "projectFilePath": "C:\\Users\\mu7147\\source\\repos\\SimpleHash\\SimpleHash.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
