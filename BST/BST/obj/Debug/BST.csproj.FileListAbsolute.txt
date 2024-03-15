@@ -1,0 +1,11 @@
+C:\Users\mu7147\source\repos\BST\BST\bin\Debug\BST.exe.config
+C:\Users\mu7147\source\repos\BST\BST\bin\Debug\BST.exe
+C:\Users\mu7147\source\repos\BST\BST\bin\Debug\BST.pdb
+C:\Users\mu7147\source\repos\BST\BST\bin\Debug\DataStructureCommon.dll
+C:\Users\mu7147\source\repos\BST\BST\bin\Debug\DataStructureCommon.pdb
+C:\Users\mu7147\source\repos\BST\BST\obj\Debug\BST.csproj.AssemblyReference.cache
+C:\Users\mu7147\source\repos\BST\BST\obj\Debug\BST.csproj.SuggestedBindingRedirects.cache
+C:\Users\mu7147\source\repos\BST\BST\obj\Debug\BST.csproj.CoreCompileInputs.cache
+C:\Users\mu7147\source\repos\BST\BST\obj\Debug\BST.csproj.CopyComplete
+C:\Users\mu7147\source\repos\BST\BST\obj\Debug\BST.exe
+C:\Users\mu7147\source\repos\BST\BST\obj\Debug\BST.pdb
