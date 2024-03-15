@@ -7,7 +7,22 @@ two ways to deal with dupulicate index in hash table
 seperate chaining, using an arraylist(in code);
 
 open addressing, (hash + increment) % size
-3 types liner, double hashing, quadratic(second time)
+3 types: liner, double hashing, quadratic(second time)
 
+seperate chaining:
 when deleting you need to add dummyobject into that position to replace the old data, and then re(hash + increment) % size
 
+
+open addressing:
+linear:easy
+quadratic:spread out
+double hashing: random
+
+open addressing:
+when deleting, important that we handle it, handle using a placeholder in place of the delete data, and when inserting new data, this is potential for a 'collision chain' which has several placeholders... use the first
+
+expend the table you have to rehash again withe new size, make sense
+
+after every insertion we check the load factor
+
+hash->insert->check load factor->open addressing->expend
