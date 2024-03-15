@@ -25,4 +25,4 @@ expend the table you have to rehash again withe new size, make sense
 
 after every insertion we check the load factor
 
-hash->insert->check load factor->open addressing->expend
+hash->insert->check load factor->open addressing->expend(if hit the load factor)->rehash and relocate all elements
