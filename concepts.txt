@@ -1,0 +1,13 @@
+<HASH TABLE>
+
+important params is load factor
+
+two ways to deal with dupulicate index in hash table
+
+seperate chaining, using an arraylist(in code);
+
+open addressing, (hash + increment) % size
+3 types liner, double hashing, quadratic(second time)
+
+when deleting you need to add dummyobject into that position to replace the old data, and then re(hash + increment) % size
+
