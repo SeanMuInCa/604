@@ -10,7 +10,7 @@ namespace HashTableExample
     {
         public Quadratic() 
         { 
-            //this.dLoadFactor = 0.5;
+            this.dLoadFactor = 0.5;
         }
         protected override int GetIncrement(int iAttempt, K key)
         {
