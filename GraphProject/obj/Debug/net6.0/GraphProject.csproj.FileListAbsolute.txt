@@ -1,0 +1,15 @@
+C:\Users\mu7147\source\repos\GraphProject\bin\Debug\net6.0\GraphProject.exe
+C:\Users\mu7147\source\repos\GraphProject\bin\Debug\net6.0\GraphProject.deps.json
+C:\Users\mu7147\source\repos\GraphProject\bin\Debug\net6.0\GraphProject.runtimeconfig.json
+C:\Users\mu7147\source\repos\GraphProject\bin\Debug\net6.0\GraphProject.dll
+C:\Users\mu7147\source\repos\GraphProject\bin\Debug\net6.0\GraphProject.pdb
+C:\Users\mu7147\source\repos\GraphProject\obj\Debug\net6.0\GraphProject.csproj.AssemblyReference.cache
+C:\Users\mu7147\source\repos\GraphProject\obj\Debug\net6.0\GraphProject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mu7147\source\repos\GraphProject\obj\Debug\net6.0\GraphProject.AssemblyInfoInputs.cache
+C:\Users\mu7147\source\repos\GraphProject\obj\Debug\net6.0\GraphProject.AssemblyInfo.cs
+C:\Users\mu7147\source\repos\GraphProject\obj\Debug\net6.0\GraphProject.csproj.CoreCompileInputs.cache
+C:\Users\mu7147\source\repos\GraphProject\obj\Debug\net6.0\GraphProject.dll
+C:\Users\mu7147\source\repos\GraphProject\obj\Debug\net6.0\refint\GraphProject.dll
+C:\Users\mu7147\source\repos\GraphProject\obj\Debug\net6.0\GraphProject.pdb
+C:\Users\mu7147\source\repos\GraphProject\obj\Debug\net6.0\GraphProject.genruntimeconfig.cache
+C:\Users\mu7147\source\repos\GraphProject\obj\Debug\net6.0\ref\GraphProject.dll
