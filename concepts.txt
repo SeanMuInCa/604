@@ -26,3 +26,102 @@ expend the table you have to rehash again withe new size, make sense
 after every insertion we check the load factor
 
 hash->insert->check load factor->open addressing->expend(if hit the load factor)->rehash and relocate all elements
+
+change the load factor can change many things, 
+
+
+Graph 
+1. structrue
+
+tree is a type of graph,at it's most basic, a grah is a set of vertic or a set of edge
+
+any veritex have n-1 edges
+
+grapsh can be 
+1. undirected and directed, 
+directed means edges may have directions  (a,b) != (b,a)
+undirected means edge work in both directions (a,b) == (b,a)
+2. symmetric or asymmetric
+generally folows directed/undirected
+3. weighted
+edges can have weight assigned
+a weight can be any value
+adjacency  we have various edge and as a path in graph
+two var and adjacent if directed connected
+incident a edge is incident to a vertext if it is moving into that vertex
+in-degree #of edges moving into a vertex
+out-degree #of edges moving out of a vertex
+
+simple graph: no loops of multiple edges between vertex
+path: a of one or many edges between two vertex
+cycle: a path where start and end at the same
+connected: undirected a path from one to any others
+strongly connected directed, path from one to any others
+sparse, dense, complete(complete connect means every one connect to all others): how many edges relatively except complete
+sparning tree a subgraph which contains all vertex from the graph not neccssaryly all edge.
+*1.no cycle
+2.lowest "cost"
+2. terminology
+3. algorithm
+
+we will use adjacency matrix and adjacency list
+matrix 2d table where each side is labeled as a vertex and edge all the cells
+unweighted cell :1
+weighted cell : weight
+
+directed or undirected graph how we travesal the graph
+
+representation of any data structure
+
+Vertex: 
+edges: - weighted or unweighted
+
+algorithmes: 
+1. searching
+-vs traversal 
+-2 kinds: depth first, breath first
+
+2. sparning tree
+-produce a subgraph
+1. all vertex
+2. minimal cost
+3. no cycles
+important application - network switches
+3. shortest path
+- 2 algorithmes
+ primes
+ krusakal
+
+through a graph from vertex to the other vertices in the graph 
+- the algorithem we'll look at is called Dijkstra's algorithem
+- can use number of hops but ususlly uses weights
+
+
+travelsal: same as tree
+Stack:
+1. is stack  empty
+2. check adjacent unvisted
+	-mark visited
+	-process 
+	-push in stack
+3. if there is no unvisted, pop, each one will return that do you have any unvisited neighbours? if no, then keep pop, untill empty
+for queue, add all neighbors as a level. 
+1. is  queue empty
+2. for each node adjacent
+	-mark visited
+	-process 
+	-enqueue in queue
+v1 for current node, v2 for travelsal node, if v2 = -1, then pop the queue and assign next v1
+
+Spanning tree:
+
+kruskal's: edge set
+1. make ordered(small to large by weight) list of edges
+2. iterator the list, adding edges no cycles(if you link all the edges, it should not be a connected)
+
+Prim’s Alg: set of v and set of vertex
+Start v set of Gv  empty set of MSTv (Minimum Spanning Tree)
+Add v’s one by one based on 
+	-V is adjacent to one in MSTv 
+	-V is not already in MSTv
+	-Min weight
