@@ -3,7 +3,30 @@ using System.Collections;
 using System.Globalization;
 
 Console.WriteLine("Hello, World!");
-Graph graph = new Graph();
+Graph aGraph = new Graph();
+aGraph.AddVertex("1");
+aGraph.AddVertex("2");
+aGraph.AddVertex("3");
+aGraph.AddVertex("4");
+aGraph.AddVertex("5");
+aGraph.AddVertex("6");
+aGraph.AddVertex("7");
+aGraph.AddVertex("8");
+aGraph.AddVertex("9");
+aGraph.AddEdge(0, 1, 7);
+aGraph.AddEdge(0, 2, 6);
+aGraph.AddEdge(1, 6, 4);
+aGraph.AddEdge(2, 3, 2);
+aGraph.AddEdge(2, 4, 8);
+aGraph.AddEdge(2, 6, 11);
+aGraph.AddEdge(3, 4, 5);
+aGraph.AddEdge(4, 5, 4);
+aGraph.AddEdge(5, 6, 3);
+aGraph.AddEdge(5, 8, 5);
+aGraph.AddEdge(6, 7, 9);
+aGraph.AddEdge(7, 8, 7);
+
+aGraph.DijkstraSPF(0);
 /*graph.AddVertex("0");
 graph.AddVertex("1");
 graph.AddVertex("2");
@@ -20,7 +43,7 @@ Console.WriteLine();
 Console.WriteLine("-------------------");
 graph.ShowGraph();*/
 
-graph.AddVertex("A");
+/*graph.AddVertex("A");
 graph.AddVertex("B");
 graph.AddVertex("C");
 graph.AddVertex("D");
@@ -49,7 +72,7 @@ graph.AddEdge(11, 12);
 
 graph.DepthFirstTraversal(0);
 Console.WriteLine();
-graph.BreathFirstTraversal(0);
+graph.BreathFirstTraversal(0);*/
 public class Vertex
 {
     private string label;
@@ -189,6 +212,72 @@ public class Graph
         {
             if (vertices[i] != null) {
                 vertices[i].WasVisited = false;
+            }
+        }
+    }
+
+    public void DijkstraSPF(int source)//index
+    {
+        int[] distance = new int[NUM_VERTICES];
+        int[] parent = new int[NUM_VERTICES];
+        bool[] processed = new bool[NUM_VERTICES];
+
+        for (int i = 0; i < numVerts; i++)
+        {
+            distance[i] = int.MaxValue;
+            processed[i] = false;
+            parent[i] = int.MaxValue;
+        }
+
+        distance[source] = 0;
+        parent[source] = -1;
+
+
+        //main loop
+        for (int i = 0; i < numVerts - 1; i++)
+        {
+            int u = MinimumDistance(distance, processed);
+            processed[u] = true;
+
+            //check u,v
+            for (int v = 0; v < numVerts; v++)
+            {
+                if (!processed[v] && adjMatrix[u, v] != 0 && distance[u] + adjMatrix[u, v] < distance[v])
+                {
+                    distance[v] = distance[u] + adjMatrix[u,v];
+                    parent[v] = u;
+                }
+            }
+        }
+        Print(distance, parent);
+    }
+    private int MinimumDistance(int[] distance, bool[] processed)
+    {
+        int min = int.MaxValue;
+        int minIndex = 0;
+
+        for (int i = 0; i < numVerts; i++)
+        {
+            if (!processed[i] && distance[i] <= min)
+            { 
+                min = distance[i];
+                minIndex = i;
+            }
+        }
+        return minIndex;
+    }
+    private void Print(int[] distance, int[] parent)
+    {
+        Console.WriteLine("Vertex\t Dist.\t Parent");
+        for (int i = 0;i < numVerts;i++) 
+        {
+            if (parent[i] < 0)//the source position
+            {
+                Console.WriteLine("{0}\t {1}\t {2}", i, distance[i], parent[i]);
+            }
+            else 
+            {
+                Console.WriteLine("{0}\t {1}\t {2}", i, distance[i], vertices[parent[i]].Label);    
             }
         }
     }
