@@ -125,3 +125,35 @@ Add v’s one by one based on
 	-V is adjacent to one in MSTv 
 	-V is not already in MSTv
 	-Min weight
+
+
+Dijkstra
+-find shortest paths through graph by always following smallest distance value (unporcessed means find all subnodes then it's processed)
+-have a particular starting point
+Storage
+1. three ways:
+	distance[],parent[],processed[]. three list has the same size with the nodes or vertecies.
+2. variables
+	u -> vertex were currently working from
+	dist(u) -> record shortest distance to u
+	adj(u,v)-> distance from u to a neighbor v(unprocessed neighbour)
+
+steps: 
+	init: for source dist = 0, parent = -1(starting point, so no parents), set processed = false,distance: maxvalue of int
+	1. identify u -> smallest unprocessed distance.
+	2. find adjacencies from u, v[]
+	3. calculate distance for each v 
+		dist(u) + adj(u,v)
+	4. if any in step3 < dist(v)...replace
+	5. all adjacent for u ... mark u processed
+so the structure is :
+	1. find u                  u:0(first time)
+	2. check the distance	   distance(u): 0(self to self)
+	3. store the neigbours     v[]:neighbours
+	4. calculate the furmula   adj(u,v), u to v how many weights, compare with the distance[]
+	5. then redo
+in the result, we have all the distances data from starting point to each node, and their parent node. means i can get every path result
+so for this algrithm is 
+1. set up everything
+2. init values
+3. set source value
